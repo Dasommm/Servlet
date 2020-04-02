@@ -1,0 +1,34 @@
+package com.answer.dao;
+
+import java.util.List;
+
+import com.answer.dto.answerDto;
+
+public interface AnswerDao {
+
+	String SELECT_ALL_SQL = " SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, TITLE, CONTENT, WRITER, REGDATE FROM ANSWERBOARD "
+			+ " ORDER BY GROUPNO DESC, GROUPSEQ ";
+	String SELECT_ONE_SQL = " SELECT BOARDNO, GROUPNO, GROUPSEQ, TITLETAB, TITLE, CONTENT, WRITER, REGDATE FROM ANSWERBOARD "
+			+ " WHERE BOARDNO = ? ";
+	String INSERT_SQL = " INSERT INTO ANSWERBOARD VALUES(BOARDNOSEQ.NEXTVAL, GROUPNOSEQ.NEXTVAL, 1, 0, ?, ?, ?,SYSDATE) ";
+	String UPDATE_SQL = " UPDATE ANSWERBOARD SET TITLE =?, CONTENT=? WHERE BOARDNO=? ";
+	String DELETE_SQL = " DELETE FROM ANSWERBOARD WHERE BOARDNO=? ";
+	String REPLY_INSERT_UPDATE_SQL = " UPDATE ANSWERBOARD SET GROUPSEQ = GROUPSEQ+1 "
+			+ " WHERE GROUPNO = (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO=?) "
+			+ " AND GROUPSEQ > (SELECT GROUPSEQ FROM ANSWERBOARD WHERE BOARDNO=?) " ;
+	String REPLY_INSERT_SQL = " INSERT INTO ANSWERBOARD "
+			+ " VALUES(BOARDNOSEQ.NEXTVAL, "
+			+ " (SELECT GROUPNO FROM ANSWERBOARD WHERE BOARDNO= ?), "
+			+ " (SELECT GROUPSEQ FROM ANSWERBOARD WHERE BOARDNO = ?)+1, "
+			+ " (SELECT TITLETAB FROM ANSWERBOARD WHERE BOARDNO = ?)+1, ?, ?, ?, SYSDATE) ";
+	
+	public List<answerDto> selectAll();
+	public answerDto selectOne(int boardno);
+	public int insert(answerDto dto);
+	public int update(answerDto dto);
+	public int delete(int boardno);
+	public int replyInsertUpdate(int boardno);
+	public int replyInsert(answerDto dto);
+	
+	
+}

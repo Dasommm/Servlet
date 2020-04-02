@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;somboard.sql&apos; to &apos;pagingBoard/src/com.board.db&apos;&#x0D;&#x0A;- Original project: &apos;js00_somsom&apos;&#x0D;&#x0A;- Destination element: &apos;pagingBoard/src/com.board.db&apos;&#x0D;&#x0A;- Original element: &apos;somboard.sql&apos;" description="Copy file" destination="=pagingBoard/src&lt;com.board.db" element1="src/com/board/db/somboard.sql" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1580634412982" units="0" version="1.0"/>
+</session>

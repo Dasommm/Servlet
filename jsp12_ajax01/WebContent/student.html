@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src = "http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+	function getParameterValues() {
+		var name ="name="+encodeURIComponent($("#name").val());
+		var kor="kor="+$("#kor").val();
+		var eng="eng="+$("#eng").val();
+		var math="math="+$("#math").val();
+		
+		var query=name+"&"+kor+"&"+eng+"&"+math;
+		
+		return query;
+		
+	}
+	$(function(){
+		$("#process").click(function(){
+			$.ajax({	//요청을 다시 하지 않는다
+				url:"score.cal?"+getParameterValues(),//쿼리스트링을 받았다 score.cal?name=홍길동&kor=00....
+				dataType:"json", //전송받는 데이터의 타입
+				success:function(msg){ //callback 함수 //servlet에서 만들어진 결과=msg
+					$("#result").html(decodeURIComponent(msg.name)+"님의 총점은"	//K=v이므로 key를 부르면 v가 온다
+					+msg.sum+"이고, 평균은"
+					+msg.avg+"입니다."
+					);
+				},
+				error:function(){
+					alert("통신실패")
+				}
+			});
+		});
+	});
+
+</script>
+
+
+</head>
+<body>
+
+	<h1>성적 처리 프로그램</h1>
+
+	이름 : <input type= "text" id="name"><br>
+	국어 : <input type= "text" id="kor"><br>
+	영어 : <input type= "text" id="eng"><br>
+	수학 : <input type= "text" id="math"><br>
+	<input type= "button" id ="process" value ="성적처리" ><br>
+	
+	<div id = "result"></div>
+</body>
+</html>

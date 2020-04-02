@@ -1,0 +1,15 @@
+DROP SEQUENCE LETTERSSEQ;
+CREATE SEQUENCE LETTERSSEQ;
+DROP TABLE LETTERS;
+CREATE TABLE LETTERS(
+	letter_id NUMBER(5) NOT NULL,	--쪽지번호(시퀀스)
+	mem_id VARCHAR2(30) NOT NULL,	--수신자
+	letter_sender VARCHAR2(30) NOT NULL,	--발신자
+	letter_title VARCHAR2(100) NOT NULL,	--쪽지제목
+	letter_content VARCHAR2(500) NOT NULL,	--쪽지내용
+	letter_regdate DATE NOT NULL,			--작성일
+	CONSTRAINT LETTERS_PK_letter_id PRIMARY KEY(letter_id),
+	CONSTRAINT LETTERS_FK_mem_id FOREIGN KEY(mem_id) REFERENCES MEMBER(mem_id)
+);
+INSERT INTO LETTERS VALUES(LETTERSSEQ.NEXTVAL,'GUEST','관리자','테스트용 쪽지','테스트입니다',SYSDATE);
+select * from letters;

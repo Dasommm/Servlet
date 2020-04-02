@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.mapper">	<!-- mapper의 이름을 설정 -->
+
+	<resultMap type="myDto" id="myMap">
+		<result property="myNo" column="MYNO"/>
+		<result property="myName" column="MYNAME"/>
+		<result property="myTitle" column="MYTITLE"/>
+		<result property="myContent" column="MYCONTENT"/>
+		<result property="myDate" column="MYDATE"/>	
+	</resultMap>
+
+  <select id="selectList" resultType="com.dto.MyDto">
+    SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE 
+    FROM MYBOARD ORDER BY MYNO DESC
+  </select>
+  <select id="selectOne" parameterType="int" resultMap="myMap"><!-- resultType="myDto" 대신 이렇게 적어줘도 된다 -->
+  	SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE
+  	FROM MYBOARD
+  	WHERE MYNO = #{myNo}
+  </select>
+  <select id="insert" parameterType="myDto">
+  	INSERT INTO MYBOARD VALUES(MYSEQ.NEXTVAL, #{myName}, #{myTitle}, #{myContent}, SYSDATE)
+  </select>
+  <select id="update" parameterType="myDto">
+  	UPDATE MYBOARD SET MYTITLE = #{myTitle}, MYCONTENT = #{myContent} WHERE MYNO = #{myNo}
+  </select>
+	<select id="delete" parameterType="int">
+	DELETE MYBOARD WHERE MYNO = #{myNo}	
+	</select>
+</mapper>

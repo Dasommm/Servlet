@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title> openAPI 통계청:공간정보서비스과 </title>
+
+<script src="http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst?serviceKey=GYr5GAKqPfO2%2BqQkH6sxuWWILqZ3GCmtkaXtkxA66JKyqXzVa7SN7vkddzjh%2FOPJ6L8qpKQjnBYsWjLGthrIEQ%3D%3D" type="text/javascript" ></script>
+<script type="text/javascript">
+var userURL = "http://localhost:8787/";				
+function fncGeoCode() {
+	var url = userURL + "/AjaxRequest.jsp?getUrl=";
+	var subURL = "http://apis.data.go.kr/1360000/VilageFcstInfoService/getVilageFcst?serviceKey="+ document.getElementById("serviceKey").value;
+	subURL += "&pageNo=1";
+	subURL += "&numOfRows=100";
+	subURL += "&dataType=JSON";
+subURL += "&base_date=20200226";
+subURL += "&base_time=0500";
+subURL += "&nx=1";
+subURL += "&ny=1";
+
+	url += encodeURIComponent(subURL);
+	$.ajax({
+	 "url" : url,
+	"type" : "GET",
+	"success" : function(result) {
+	     console.log(result);
+	},
+	"async" : "false",
+	"dataType" : "json",
+	"error": function(x,o,e){
+		alert(x.status + ":" +o+":"+e);	
+	}
+	});	
+}
+</script> 
+</head>
+<body >
+	serviceKey : <input type="text" id="serviceKey" value="발급받은키"/><br />
+	지번주소<br />
+	시도 : <input type="text" id="sido" value="대전광역시"/><br />
+	시군구 : <input type="text" id="sigungu" value="서구"/><br />
+읍면동 : <input type="text" id="dong" value="월평동"/><br />
+지번 : <input type="text" id="jibun" value="245"/><br />	
+	<input type="button" value="GeoCode Service" onclick="fncGeoCode()"/><br />
+	중부원점(TM_M)<br />
+	X좌표 : <input type="text" id="x_coords" />  Y좌표 : <input type="text" id="y_coords" /><br />
+	주 소 : <input type="text" id="address" /><br />
+		</body>
+</html>

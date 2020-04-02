@@ -1,0 +1,49 @@
+<%@page import="com.my.dto.MyDto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <% request.setCharacterEncoding("UTF-8");%>
+    <% response.setContentType("text/html; charset=UTF-8");%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+//dto에 담겨온 데이터(name, title,content)를 dao를 통해 db연결
+
+	String myname = request.getParameter("myname");
+	String mytitle = request.getParameter("mytitle");
+	String mycontent = request.getParameter("mycontent");
+	
+	MyDto dto = new MyDto();
+	dto.getMyname();
+	dto.getMytitle();
+	dto.getMycontent();
+	
+
+
+
+
+%>
+
+<script type="text/javascript">
+	alert("success!");
+	location.href = "mylist.jsp";
+</script>
+
+<%
+
+%>
+
+<script type="text/javascript">
+	alert("failed");
+	location.href = "myinsert.jsp";
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<%@page import="com.my.dto.MyDto"%>
+<%@page import="com.my.dao.MyDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <% request.setCharacterEncoding("UTF-8");%>
+    <% response.setContentType("text/html; charset=UTF-8");%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>detail</title>
+</head>
+<body>
+
+
+<%
+//mylist에서 myno를 보내줬다 => myno를 받는다
+//request로 넘어간 애들은 String type이기 때문에 int type으로 바꿔준다
+	int myno = Integer.parseInt(request.getParameter("myno"));
+	MyDao dao = new MyDao();
+	MyDto dto = dao.selectOne(myno);
+	
+%>
+
+<h1>Detail</h1>
+	
+		<table border="1">
+		<tr>
+			<th>Name</th>
+			<td><%=dto.getMyname() %></td>
+		</tr>
+		<tr>
+			<th>Title</th>
+			<td><%=dto.getMytitle() %></td>
+		</tr>
+		<tr>
+			<th>Text</th>
+			<td><textarea rows="5" cols="50" name ="mycontent" readonly = "readonly">
+			<%=dto.getMycontent() %></textarea></td>
+		</tr>	
+		<tr>
+			<td colspan = "2">
+			<input type = "button" value ="modify" onclick = "location.href ='myupdate.jsp?myno=<%=dto.getMyno()%>'">
+			<input type = "button" value ="delete" onclick = "location.href ='mydelete.jsp?myno=<%=dto.getMyno()%>'">
+			<input type = "button" value ="list" onclick= "location.href ='mylist.jsp'" >
+			</td>			
+		</tr>
+		</table>
+	
+</body>
+</html>

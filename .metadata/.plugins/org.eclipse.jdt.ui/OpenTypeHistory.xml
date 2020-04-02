@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=jsp03_MVC/src&lt;com.mvc.dao{MVCDao.java[MVCDao" modifiers="513" timestamp="1578474969734"/>
+<typeInfo handle="=jsp03_MVC/src&lt;com.mvc.biz{MVCBiz.java[MVCBiz" modifiers="513" timestamp="1578467320894"/>
+<typeInfo handle="=jsp04_login/src&lt;com.login.dao{MyMemberDao.java[MyMemberDao" modifiers="513" timestamp="1578557415085"/>
+<typeInfo handle="=jsp04_login/src&lt;com.login.biz{MyMemberBiz.java[MyMemberBiz" modifiers="513" timestamp="1578629640347"/>
+<typeInfo handle="=jsp07_MVC/src&lt;com.mvc.dao{MVCDao.java[MVCDao" modifiers="513" timestamp="1579000894729"/>
+<typeInfo handle="=jsp07_MVC/src&lt;com.mvc.biz{MVCBiz.java[MVCBiz" modifiers="513" timestamp="1578985399460"/>
+<typeInfo handle="=jsp09_MVC/src&lt;com.mvc.dao{MyDao.java[MyDao" modifiers="513" timestamp="1579174484724"/>
+<typeInfo handle="=jsp09_MVC/src&lt;com.mvc.biz{MyBiz.java[MyBiz" modifiers="513" timestamp="1579173177304"/>
+<typeInfo handle="=js00_somsom/src&lt;com.board.dao{SomiDao.java[SomiDao" modifiers="513" timestamp="1579351285206"/>
+<typeInfo handle="=js00_somsom/src&lt;com.board.biz{SomiBiz.java[SomiBiz" modifiers="513" timestamp="1579351022183"/>
+<typeInfo handle="=jsp10_answerboard/src&lt;com.answer.dao{AnswerDao.java[AnswerDao" modifiers="513" timestamp="1579591094750"/>
+<typeInfo handle="=jsp10_answerboard/src&lt;com.answer.biz{AnswerBiz.java[AnswerBiz" modifiers="513" timestamp="1579591997668"/>
+<typeInfo handle="=js00_somsom/src&lt;com.login.dao{MbDao.java[MbDao" modifiers="513" timestamp="1580232827560"/>
+<typeInfo handle="=js00_somsom/src&lt;com.login.biz{MbBiz.java[MbBiz" modifiers="513" timestamp="1579540666889"/>
+<typeInfo handle="=jsp11_answerboard_delete/src&lt;com.answer.dao{AnsDao.java[AnsDao" modifiers="513" timestamp="1579608416247"/>
+<typeInfo handle="=jsp11_answerboard_delete/src&lt;com.answer.biz{AnsBiz.java[AnsBiz" modifiers="513" timestamp="1579605801534"/>
+<typeInfo handle="=jsp14_bike/src&lt;com.bike.biz{BikeBiz.java[BikeBiz" modifiers="513" timestamp="1579762672095"/>
+<typeInfo handle="=pagingBoard/src&lt;com.board.dao{BoardDao.java[BoardDao" modifiers="513" timestamp="1580655573450"/>
+<typeInfo handle="=pagingBoard/src&lt;com.board.biz{BoardBiz.java[BoardBiz" modifiers="513" timestamp="1580703727831"/>
+</typeInfoHistroy>

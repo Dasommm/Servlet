@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;jsp16_calboard&apos;&#x0D;&#x0A;- Original project: &apos;jsp16_calboard&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     commons-beanutils-1.9.4-bin&#x0D;&#x0A;     commons-collections-3.2.2-bin&#x0D;&#x0A;     commons-lang-2.6-bin&#x0D;&#x0A;     commons-logging-1.2-bin" description="Delete elements" element1="WebContent/WEB-INF/lib/commons-logging-1.2-bin" element2="WebContent/WEB-INF/lib/commons-beanutils-1.9.4-bin" element3="WebContent/WEB-INF/lib/commons-collections-3.2.2-bin" element4="WebContent/WEB-INF/lib/commons-lang-2.6-bin" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1580289144849" subPackages="false" version="1.0"/>
+</session>

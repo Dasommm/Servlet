@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="muldel">
+
+<select id="selectList" resultType="mdDto">
+SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE
+FROM MDBOARD
+ORDER BY SEQ DESC
+</select>
+<select id="selectOne" resultType="mdDto">
+SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE
+FROM MDBOARD
+WHERE SEQ = #{seq}
+</select>
+<insert id="insert" parameterType="mdDto">
+INSERT INTO MDBOARD VALUES(MDBOARDSEQ.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE)
+</insert>
+<update id="update" parameterType="mdDto">
+UPDATE MDBOARD SET TITLE = #{title}, CONTENT = #{content} WHERE SEQ = #{seq}
+</update>
+<delete id="delete" parameterType="int">
+DELETE FROM MDBOARD WHERE SEQ = #{seq}
+</delete>
+<delete id="muldel" parameterType="map">
+DELETE FROM MDBOARD 
+WHERE SEQ IN
+<foreach collection="seqs" item="seq" open="(" separator="," close=")"> <!-- seqs에 담긴 seq들을 하나하나 가져올거다 -->
+	#{seq}	<!-- (1,2,3,4,...) 이런식으로 값이 나올 거다 -->
+</foreach>
+</delete>
+
+</mapper>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Dasommm/test.git"/>
+		<item value="https://github.com/kdy41000/GitRestart.git"/>
+		<item value="https://github.com/kdy41000/DynamicProject.git"/>
+		<item value="https://github.com/kdy41000/dongsGitTest.git"/>
+		<item value="https://github.com/Dasommm/hello-world.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="dasommm &lt;dasom.kwon92@gmail.com&gt;"/>
+		<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="dasommm &lt;dasom.kwon92@gmail.com&gt;"/>
+		<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\Sophie\git\dongsGitTest\.git">
+			<item value="false"/>
+			<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+			<item value="git test111"/>
+			<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+			<item value="4f6e0a175c8d0a80d4a774410419bd78a9c7a7b8"/>
+			<item value="0"/>
+			<item value="false"/>
+		</list>
+		<list key="C:\Users\Sophie\git\hello-world\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Sophie\git\hello-world\test111\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Sophie\git\repository\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\workspace_web\js00_prac_som\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Sophie\git\DynamicProject\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Sophie\git\GitRestart\.git">
+			<item value="false"/>
+			<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+			<item value="Merge branch &apos;master&apos; of https://github.com/kdy41000/GitRestart.git&#x0A;&#x0A;Conflicts:&#x0A;&#x09;GitRestartMain/WebContent/signupform.jsp&#x0A;"/>
+			<item value="Sophie &lt;Sophie@DESKTOP-G6V54RC&gt;"/>
+			<item value="18f27781280f1c93e80087ccf767dc62f32ccff3"/>
+			<item value="0"/>
+			<item value="false"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="313"/>
+		<item key="DIALOG_Y_ORIGIN" value="111"/>
+		<item key="DIALOG_WIDTH" value="666"/>
+		<item key="DIALOG_HEIGHT" value="458"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.MergeTargetSelectionDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="377"/>
+		<item key="DIALOG_Y_ORIGIN" value="-5"/>
+		<item key="DIALOG_WIDTH" value="538"/>
+		<item key="DIALOG_HEIGHT" value="672"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.fetch.FetchResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="338"/>
+		<item key="DIALOG_Y_ORIGIN" value="111"/>
+		<item key="DIALOG_WIDTH" value="616"/>
+		<item key="DIALOG_HEIGHT" value="458"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.merge.MergeResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="343"/>
+		<item key="DIALOG_Y_ORIGIN" value="270"/>
+		<item key="DIALOG_WIDTH" value="607"/>
+		<item key="DIALOG_HEIGHT" value="219"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="335"/>
+		<item key="DIALOG_Y_ORIGIN" value="220"/>
+		<item key="DIALOG_WIDTH" value="623"/>
+		<item key="DIALOG_HEIGHT" value="295"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.repository.CreateBranchPage$SourceSelectionDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="-7"/>
+		<item key="DIALOG_Y_ORIGIN" value="-131"/>
+		<item key="DIALOG_WIDTH" value="538"/>
+		<item key="DIALOG_HEIGHT" value="484"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.CheckoutDialog.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="699"/>
+		<item key="DIALOG_Y_ORIGIN" value="206"/>
+		<item key="DIALOG_WIDTH" value="538"/>
+		<item key="DIALOG_HEIGHT" value="484"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

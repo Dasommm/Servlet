@@ -1,0 +1,12 @@
+127.0.0.1 - - [28/Feb/2020:14:54:11 +0900] "GET / HTTP/1.1" 404 750
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:11 +0900] "GET /jsp15_weather/weatherview.html HTTP/1.1" 200 2041
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:12 +0900] "GET /jsp15_weather/js/jquery-3.4.1.js HTTP/1.1" 200 280364
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:12 +0900] "GET /jsp15_weather/js/weatherajax.js HTTP/1.1" 200 1169
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:26 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/image/rain.png HTTP/1.1" 200 89970
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171
+0:0:0:0:0:0:0:1 - - [28/Feb/2020:14:54:27 +0900] "GET /jsp15_weather/weather?code=1174068500 HTTP/1.1" 200 171

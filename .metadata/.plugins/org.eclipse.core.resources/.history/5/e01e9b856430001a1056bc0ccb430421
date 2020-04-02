@@ -1,0 +1,5 @@
+package com.md.dto;
+
+public class MDBoardDto {
+
+}

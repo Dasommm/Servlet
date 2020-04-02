@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<a href = "hello.do">hello</a>
+
+	<form action="HelloServlet" method = "post">
+	<input type= "hidden" name = "command" value = "hello">
+	<input type = "submit" value = "포스트">
+	
+	
+	
+	</form>
+	
+	<a href = "/hello.do">hello2</a><!-- 그냥 /만 붙으면 tomcat을 의미한다 -->
+	<!-- /는 최상위폴더, ./는 현재폴더 , ../는 상위폴더 (현재 나의 페이지 기준으로) -->
+	
+</body>
+</html>

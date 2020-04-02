@@ -1,0 +1,76 @@
+package com.my.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.my.db.JDBCTemplate;
+import com.my.dto.MyDto;
+
+public class MyDao extends JDBCTemplate{
+
+	public List<MyDto> selectList(){
+				
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		List<MyDto> list = new ArrayList<MyDto>();
+		
+		//쿼리준비
+		String sql = " SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE "
+				+ " FROM MYBOARD ";
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				MyDto dto = new MyDto();
+				dto.setMyno(rs.getInt(1));
+				dto.setMyname(rs.getString(2));
+				dto.setMytitle(rs.getString(3));
+				dto.setMycontent(rs.getString(4));
+				dto.setMydate(rs.getDate(5));
+				
+				list.add(dto);
+			}
+					
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			
+		}
+		return list;
+	}
+	
+	public MyDto selectOne(int myno) {	
+		
+		
+		return null;
+	}
+	
+	public int insert(MyDto dto) {
+		
+		
+		return 0;
+	}
+	
+	public int update(int myno) {
+		
+
+		return 0;
+	}
+	
+	public int delete(int myno) {
+		
+		
+		return 0;
+	}
+	
+	
+}

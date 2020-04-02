@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <% request.setCharacterEncoding("UTF-8");%>
+    <% response.setContentType("text/html; charset=UTF-8");%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>insert</h1>
+	
+	<form action="">
+		<table border="1">
+		<tr>
+			<td>Name</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Title</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Text</td>
+			<td></td>
+		</tr>	
+		<tr>
+			<button value = "okay"></button>		
+			<button value = "cancel"></button>
+		</tr>
+	
+	</table>
+	</form>
+	
+	
+
+
+
+</body>
+</html>

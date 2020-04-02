@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<a href = "hello.do">hello</a>
+
+	<form action="HelloServlet" method = "post">
+	<input type= "hidden" name = "command" value = "hello">
+	<input type = "submit" value = "포스트">
+	
+	
+	
+	</form>
+	
+	<a href = "/hello.do">hello2</a>
+	
+</body>
+</html>

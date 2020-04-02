@@ -1,0 +1,61 @@
+package com.my.dto;
+
+import java.util.Date;
+
+public class MyDto {
+
+	private int myno;
+	private String myname;
+	private String mytitle;
+	private String mycontent;
+	private Date mydate;
+	
+	public MyDto() {
+		
+	}
+	
+	public MyDto(int myno, String myname, String mytitle, String mycontent, Date mydate) {
+		this.myno = myno;
+		this.myname = myname;
+		this.mytitle = mytitle;
+		this.mycontent = mycontent;
+		this.mydate = mydate;
+		
+	}
+
+	public int getMyno() {
+		return myno;
+	}
+
+	public void setMyno(int myno) {
+		this.myno = myno;
+	}
+
+	public int getMyno() {
+		return myno;
+	}
+	
+	public void setMyno(int myno) {
+		this.myno = myno;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

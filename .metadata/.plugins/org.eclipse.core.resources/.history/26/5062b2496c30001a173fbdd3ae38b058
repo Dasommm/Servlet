@@ -1,0 +1,38 @@
+package com.mb.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCTemplate {
+
+	//1.driver 연결, 2.계정연결, 5.db종료
+	public static Connection getConnection() {
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("드라이버연결");
+		} catch (ClassNotFoundException e) {
+			System.out.println("error 1");
+			e.printStackTrace();
+		}
+		
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "kh";
+		String password = "kh";
+		
+		Connection con = null;
+		try {
+			con = DriverManager.getConnection(url, user, password);
+			con.setAutoCommit(false);
+			System.out.println("계정연결");
+		} catch (SQLException e) {
+			System.out.println("error 2");
+			e.printStackTrace();
+		}		
+		
+		return con;
+	}
+
+
+}

@@ -1,0 +1,38 @@
+package com.md.dao;
+import static com.mb.db.JDBCTemplate.*;
+
+import java.util.List;
+//import에 static을 붙이면 class를 생략하고 메소드만 사용할 수 있다.static 없는 경우엔 class.method로 호출해야함
+
+import com.md.dto.MDBoardDto;
+
+public class MDBoardDao {
+
+	public List<MDBoardDto> selectList(){
+		
+		return null;
+	}
+	
+	public List<MDBoardDto> selectOne(){
+		
+		return null;
+	}
+	
+	public int insert() {
+		return 0;
+	}
+	
+	public int update() {
+		return 0;
+		
+	}
+	
+	public int delete() {
+		
+		return 0;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>jsp05_helloservlet</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file> <!-- 프로젝트를 run하면 처음 실행될 파일 -->
+  </welcome-file-list>
+  
+  <context-param> <!-- context(web-content= 프로젝트전체)내에서 사용될 parameter// param은 메소드 내에서 사용될 변수 -->
+  	<param-name>jdbcurl</param-name>
+  	<param-value>jdbdLoracle:thin:@oraclehost:1521:xe</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>hello</servlet-name>
+ 	<servlet-class>com.hello.controller.HelloServlet</servlet-class><!-- HelloServlet이라는  class type으로 객체가 만들어졌다 위의 sevlet이름으로 -->
+  	<init-param>	<!-- 만들어진 servlet 객체 안에서만 사용할 수 있는 변수 -->
+  		<param-name>driver</param-name>
+  		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  	</init-param>
+  	<!-- <load-on-startup>1</load-on-startup>서버가 실행할 때 같이 실행하는 순서 -->
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>hello</servlet-name>
+  	<url-pattern>/hello.do</url-pattern> <!-- 앞에 루트(/)꼭 기억하기. 하지 않으면 톰캣이 실행 못함 -->
+  </servlet-mapping>	<!-- /hello.do라는 요청(request)가 들어오면 hello라는 servlet을 호출해줘라-->
+  
+</web-app>

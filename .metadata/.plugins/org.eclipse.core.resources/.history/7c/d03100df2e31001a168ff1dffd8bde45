@@ -1,0 +1,47 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+
+import com.db.JDBCTemplate;
+import com.dto.SomDto;
+
+public class SomDao extends JDBCTemplate{
+	
+	
+	public List<SomDto> selectAll(SomDto dto){
+		
+		Connection con = getConnection();
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		String sql = " SELECT SNUM, SNAME, STITLE, SCONTENT, SDATE "
+				+ " FROM SOMBOARD ORDER BY SNUM DESC ";
+		
+		
+		return null;
+		
+	}
+
+	public SomDto selectOne(int snum) {
+		
+		return null;
+	}
+	
+	public int insert(SomDto dto) {
+		
+		return 0;
+	}
+	
+	public int update(SomDto dto) {
+		
+		return 0;
+	}
+	
+	public int delete(int snum) {
+		
+		return 0;
+	}
+}

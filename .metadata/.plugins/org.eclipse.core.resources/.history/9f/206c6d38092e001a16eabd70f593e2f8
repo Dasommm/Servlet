@@ -1,0 +1,92 @@
+package com.my.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.my.dto.MyDto;
+
+public class MyDao {
+
+	public List<MyDto> selectList(){
+		//드라이버 연결
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//계정연결
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "kh";
+		String password = "kh";
+		
+		Connection con = null;
+
+		
+		try {
+			con = DriverManager.getConnection(url, user, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Statement stmt = null;
+		ResultSet rs = null;
+		List<MyDto> list = new ArrayList<MyDto>();
+		
+		//쿼리준비
+		String sql = " SELECT MYNO, MYNAME, MYTITLE, MYCONTENT, MYDATE "
+				+ " FROM MYBOARD ";
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				MyDto dto = new Mydto();
+				dto.setMyno(rs.getInt(1));
+				dto.setMyname(rs.getString(2));
+				dto.setMytitle(rs.getString(3));
+				dto.setMycontent(rs.getString(4));
+				dto.setMydate(rs.getDate(5));
+			}
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+				
+		//실행 및 리턴
+		//db종료
+		
+		return list;
+	}
+	
+	public MyDto selectOne() {
+		return dto;
+	}
+	
+	public int insert() {
+		
+		return 0;
+	}
+	
+	public int update() {
+
+		return 0;
+	}
+	
+	public int delete() {
+		
+		return 0;
+	}
+	
+	
+}

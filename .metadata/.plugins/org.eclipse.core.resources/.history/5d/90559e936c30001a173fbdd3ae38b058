@@ -1,0 +1,9 @@
+package com.md.dao;
+import static com.mb.db.JDBCTemplate.*;
+
+public class MDBoardDao {
+
+	
+	
+	
+}

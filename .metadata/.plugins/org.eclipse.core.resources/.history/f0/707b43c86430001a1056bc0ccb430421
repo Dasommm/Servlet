@@ -1,0 +1,13 @@
+package com.md.dto;
+
+import java.util.Date;
+
+public class MDBoardDto {
+	
+	private int seq;
+	private String writer;
+	private String title;
+	private String content;
+	private Date regdate;
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="memberMyPage">
+ 	<select id="selectMyInfo" resultType="memberDto" parameterType="String">
+ 		SELECT *
+ 		FROM MEMBER
+ 		WHERE mem_id= #{mem_id}
+ 	</select>
+ 	<update id="updateMyInfo" parameterType="memberDto">
+ 		UPDATE MEMBER
+ 		<set>
+ 			mem_pw = #{mem_pw},
+ 			mem_phone = #{mem_phone},
+ 			mem_email = #{mem_email},
+ 			mem_zonecode = #{mem_zonecode},
+ 			mem_addr = #{mem_addr},
+ 			mem_addretc = #{mem_addretc}
+ 		</set>
+ 		WHERE mem_id = #{mem_id}
+ 	</update>
+ 	<update id="memberDelete" parameterType="String">
+ 		UPDATE MEMBER
+ 		SET mem_drop = 'N'
+ 		WHERE mem_id = #{mem_id}
+ 	</update>
+ 	<select id="selectGrade" resultType="memberDto" parameterType="String">
+ 		SELECT mem_grade, mem_name, farmer_status, farmer_regdate
+ 		FROM MEMBER INNER JOIN FARMER
+ 		USING (mem_id)
+ 		WHERE mem_id=#{mem_id}
+ 	</select>
+ 	<insert id="applyGradeUp" parameterType="String">
+ 		INSERT INTO FARMER
+ 		VALUES(#{mem_id}, 1, SYSDATE)
+ 	</insert>
+</mapper>

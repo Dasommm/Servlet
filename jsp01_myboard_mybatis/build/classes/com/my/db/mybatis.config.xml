@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd"> <!-- doc type 정의 -->
+<configuration>
+	<!--  tag 를 이 순서대로 해줘야한다.
+	Content Model : (properties?, settings?, typeAliases?, typeHandlers?, objectFactory?, objectWrapperFactory?, 
+ reflectorFactory?, plugins?, environments?, databaseIdProvider?, mappers?) -->
+ 	<properties resource="com/my/db/db.properties"></properties><!-- 경로를 쓸 때에는 /이고, 이름일때는 .으로 쓴다 -->
+	<typeAliases>
+		<typeAlias type="com.dto.MyDto" alias="myDto"/>
+	
+	</typeAliases>
+ 	
+ 	
+ 	
+  <environments default="development">	
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">		<!-- 이 부분이 중요하다 -->
+        <property name="driver" value="${driver}"/>	<!-- JDBCTemplate에서의 1,2번의 역할 -->
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="com/my/db/mybatis-mapper.xml"/>
+  </mappers>
+</configuration>

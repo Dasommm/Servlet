@@ -1,0 +1,11 @@
+package com.md.dto;
+
+public class MDBoardDto {
+	
+	private int seq;
+	private String writer;
+	private String title;
+	private String content;
+	private Date regdate;
+
+}

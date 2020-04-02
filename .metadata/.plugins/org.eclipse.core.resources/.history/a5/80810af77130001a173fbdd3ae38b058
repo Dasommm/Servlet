@@ -1,0 +1,76 @@
+package com.md.dao;
+import static com.mb.db.JDBCTemplate.*;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+//import에 static을 붙이면 class를 생략하고 메소드만 사용할 수 있다.static 없는 경우엔 class.method로 호출해야함
+
+import com.md.dto.MDBoardDto;
+
+public class MDBoardDao {
+
+	public List<MDBoardDto> selectList(MDBoardDto dto){
+		Connection con = getConnection();
+		Statement stmt = null;
+		ResultSet rs = null;
+		String sql = " SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE "
+				+ " FROM MDBOARD "
+				+ " ORDER BY SEQ DESC ";
+		List<MDBoardDto> list = new ArrayList<MDBoardDto>();
+		
+		try {
+			stmt = con.createStatement();
+			System.out.println("쿼리준비");
+			
+			rs = stmt.executeQuery(sql);
+			System.out.println("실행 및 리턴");
+			
+			while(rs.next()) {
+				MDBoardDto dtos = new MDBoardDto();
+					dtos.setSeq(rs.getInt(1));
+					dtos.setWriter(rs.getString(2));
+					dtos.setTitle(rs.getString(3));
+					dtos.setContent(rs.getString(4));
+					dtos.setRegdate(rs.getDate(5));
+					
+					list.add(dto);
+								
+			}			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close(rs,stmt,con);
+			System.out.println("db종료");
+		}
+		
+		return list;
+	}
+	
+	public List<MDBoardDto> selectOne(MDBoardDto dto){
+		
+		return null;
+	}
+	
+	public int insert(int seq) {
+		return 0;
+	}
+	
+	public int update(MDBoardDto dto) {
+		return 0;
+		
+	}
+	
+	public int delete(int seq) {
+		
+		return 0;
+	}
+	
+	
+	
+	
+}

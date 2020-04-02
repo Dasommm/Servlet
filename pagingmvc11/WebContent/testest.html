@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+
+    function category() {
+        var category = document.getElementById("selectCategory").value;
+        if (category == 1) {
+            location.href = '../board.do?command=boardCate1';
+        } else if (category == 2) {
+            location.href = '../board.do?command=boardCate2';
+        }
+    }
+</script>
+
+<body>
+    <div class="selectBox">
+        <select id="selectCategory" onchange="category();">
+            <optgroup label="--말머리 선택--"></optgroup>
+            <option value="1">공지사항</option>
+            <option value="2">자유게시판</option>
+        </select>
+    </div>
+</body>
+</html>

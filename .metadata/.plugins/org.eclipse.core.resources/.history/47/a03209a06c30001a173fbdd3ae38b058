@@ -1,0 +1,10 @@
+package com.md.dao;
+import static com.mb.db.JDBCTemplate.*;
+//class를 생략하고 메소드만 사용할 수 있다.static 없는 경우엔 class.method로 호출해야함
+
+public class MDBoardDao {
+
+	
+	
+	
+}

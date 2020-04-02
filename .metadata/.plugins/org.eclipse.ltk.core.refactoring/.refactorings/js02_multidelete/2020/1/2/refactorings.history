@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;js02_multidelete/WebContent/input.jsp&apos; to &apos;inputres.jsp&apos;" description="Rename resource &apos;input.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/input.jsp" name="inputres.jsp" stamp="1578313474518" updateReferences="true"/>
+</session>
